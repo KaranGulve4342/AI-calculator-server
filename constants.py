@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-SERVER_URL = 'localhost'
+SERVER_URL = 'ai-calculator-server-taupe.vercel.app'
 PORT = '8900'
 ENV = 'dev'
 
