@@ -120,7 +120,11 @@ origins = [
     "http://localhost:8080",
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://ai-calculator-server-taupe.vercel.app"
+    "https://ai-calculator-server-taupe.vercel.app",
+    "https://ai-calculator-server-taupe.vercel.app:5173",
+    "https://ai-calculator-server-taupe.vercel.app:8080",
+    "https://ai-calculator-server-taupe.vercel.app:3000",
+    "https://ai-calculator-server-taupe.vercel.app:8090",
 ]
 
 # Update the CORS middleware configuration
