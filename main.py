@@ -84,10 +84,7 @@ app = FastAPI(lifespan=lifespan)
 # Update the CORS middleware configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://ai-calculator-client.vercel.app",  # Add your client URL here
-        "http://localhost:5173"  # Add localhost for development
-    ],
+    allow_origins=["*"],  # Allow all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
