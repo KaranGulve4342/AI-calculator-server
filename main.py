@@ -49,13 +49,14 @@ app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://ai-calculator-client.vercel.app",  # Add your client URL here
-        "http://localhost:5173"  # Add localhost for development
+        "https://ai-calculator-client.vercel.app",
+        "http://localhost:5173"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.get('/')
 async def root():
