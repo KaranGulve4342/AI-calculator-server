@@ -114,14 +114,25 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+origins = [
+    "https://ai-calculator-client.vercel.app",
+    "http://localhost",
+    "http://localhost:8080",
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://ai-calculator-server-taupe.vercel.app"
+]
+
 # Update the CORS middleware configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ai-calculator-client.vercel.app"],  # Allow specific origin
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Access-Control-Allow-Origin: https://ai-calculator-client.vercel.app
 
 @app.get('/')
 async def root():
